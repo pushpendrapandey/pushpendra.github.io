@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pushpendra Pandey — Director of Architecture | Enterprise Systems, Cloud & Data Strategy" />
+  <meta name="description" content="Pushpendra Pandey — Director of Architecture | Enterprise Systems, Cloud Modernization & Thought Leadership" />
   <title>Pushpendra Pandey | Director of Architecture</title>
   
   <!-- Inter Font -->
@@ -15,6 +15,7 @@
     :root {
       --bg: #0b0f19;
       --surface: #111827;
+      --surface-hover: #162032;
       --surface-border: #1f2937;
       --text-main: #f9fafb;
       --text-muted: #9ca3af;
@@ -22,7 +23,7 @@
       --accent-hover: #60a5fa;
       --accent-soft: rgba(59, 130, 246, 0.1);
       --font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --max-width: 1100px;
+      --max-width: 1120px;
     }
 
     * {
@@ -46,14 +47,13 @@
     a {
       color: var(--accent);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s ease;
     }
 
     a:hover {
       color: var(--accent-hover);
     }
 
-    /* Container */
     .container {
       width: 100%;
       max-width: var(--max-width);
@@ -66,8 +66,8 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11, 15, 25, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(11, 15, 25, 0.90);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--surface-border);
     }
 
@@ -75,7 +75,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 70px;
+      height: 72px;
     }
 
     .logo {
@@ -87,13 +87,13 @@
 
     .nav-links {
       display: flex;
-      gap: 1.75rem;
+      gap: 1.5rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
     }
 
@@ -101,7 +101,7 @@
       color: var(--text-main);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       padding: 6.5rem 0 5rem;
       border-bottom: 1px solid var(--surface-border);
@@ -129,11 +129,10 @@
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 800px;
       margin-bottom: 2rem;
-      font-weight: 400;
     }
 
     .cta-group {
@@ -145,7 +144,8 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      padding: 0.75rem 1.4rem;
+      gap: 0.4rem;
+      padding: 0.75rem 1.35rem;
       font-size: 0.9rem;
       font-weight: 600;
       border-radius: 8px;
@@ -175,30 +175,108 @@
       border-color: #374151;
     }
 
-    /* Section Global */
+    /* Sections */
     section {
       padding: 5rem 0;
       border-bottom: 1px solid var(--surface-border);
     }
 
     .section-title {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
     }
 
     .section-subtitle {
-      font-size: 1rem;
+      font-size: 0.975rem;
       color: var(--text-muted);
-      margin-bottom: 3rem;
+      margin-bottom: 2.75rem;
     }
 
-    /* Experience Timeline */
+    /* Grids & Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #374151;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+      color: var(--text-main);
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      background: #1e293b;
+      border: 1px solid #334155;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      color: #cbd5e1;
+    }
+
+    /* Timeline */
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2.25rem;
     }
 
     .timeline-item {
@@ -223,18 +301,13 @@
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
     .role-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--text-main);
-    }
-
-    .item-meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
     }
 
     .company-name {
@@ -244,9 +317,14 @@
       margin-bottom: 0.75rem;
     }
 
+    .item-meta {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
     .item-desc {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
     .item-desc ul {
@@ -255,77 +333,29 @@
     }
 
     .item-desc li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.35rem;
     }
 
-    /* Skills Grid */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-      border-radius: 10px;
-      padding: 1.75rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: #374151;
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      color: var(--text-main);
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .pill {
-      background: #1e293b;
-      border: 1px solid #334155;
-      font-size: 0.775rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: 6px;
-      color: #cbd5e1;
-    }
-
-    /* Contact Section */
+    /* Contact Card */
     .contact-card {
       background: var(--surface);
       border: 1px solid var(--surface-border);
       border-radius: 12px;
-      padding: 3rem 2rem;
+      padding: 3.5rem 2rem;
       text-align: center;
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
     .contact-card h2 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       margin-bottom: 1rem;
     }
 
     .contact-card p {
       color: var(--text-muted);
       margin-bottom: 2rem;
+      font-size: 1rem;
     }
 
     footer {
@@ -335,20 +365,22 @@
       font-size: 0.85rem;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 2.25rem;
+        font-size: 2.2rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
       }
       .nav-links {
-        display: none; /* Can be expanded with a toggle */
+        display: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Sticky Navbar -->
   <header>
     <div class="container nav-wrapper">
       <div class="logo">Pushpendra Pandey</div>
@@ -356,7 +388,9 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#architecture">Architecture</a></li>
-        <li><a href="#affiliations">Leadership & Service</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#speaking">Speaking & Panels</a></li>
+        <li><a href="#affiliations">Service & Honors</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -365,14 +399,15 @@
   <!-- Hero Section -->
   <div class="hero">
     <div class="container">
-      <span class="badge">Enterprise Technology & Architecture Leadership</span>
-      <h1>Architecting Resilient Platforms for Mission-Critical Financial Systems</h1>
+      <span class="badge">Director of Architecture &bull; IEEE Senior Member</span>
+      <h1>Architecting Enterprise Resiliency, Cloud Transformation & Distributed Systems</h1>
       <p>
-        Director of Architecture with over two decades of experience designing event-driven systems, modernizing enterprise infrastructure, and leading cross-functional engineering teams.
+        20+ years leading technology strategy, distributed system modernization, and large-scale cloud adoption across financial services and mission-critical enterprise environments.
       </p>
       <div class="cta-group">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#experience" class="btn btn-secondary">View Career Milestones</a>
+        <a href="#contact" class="btn btn-primary">Connect with Me &rarr;</a>
+        <a href="#publications" class="btn btn-secondary">Read Publications</a>
+        <a href="#speaking" class="btn btn-secondary">Speaking Engagements</a>
       </div>
     </div>
   </div>
@@ -381,9 +416,9 @@
   <section id="about">
     <div class="container">
       <h2 class="section-title">Executive Summary</h2>
-      <p class="section-subtitle">Bridging business strategy and technical execution</p>
-      <p style="max-width: 850px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.75;">
-        With 20+ years driving large-scale digital transformations across financial services, I specialize in designing fault-tolerant, high-throughput architectures and leading technology teams toward engineering excellence. My focus spans domain-driven design, real-time event streaming, cloud platform governance, and aligning long-term architectural visions with core organizational objectives.
+      <p class="section-subtitle">Bridging corporate vision, technical rigor, and cross-functional leadership</p>
+      <p style="max-width: 860px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+        As a technology executive and systems architect with over two decades in financial services, I specialize in transforming mission-critical platforms into modern, decoupled, and event-driven architectures. My leadership emphasizes rigorous domain modeling, zero-data-loss streaming backbones, resilient hybrid-cloud migrations, and the professional mentorship of high-impact engineering teams.
       </p>
     </div>
   </section>
@@ -391,11 +426,10 @@
   <!-- Experience Section -->
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Leadership Experience</h2>
-      <p class="section-subtitle">Career progression across financial services and consulting</p>
+      <h2 class="section-title">Leadership & Track Record</h2>
+      <p class="section-subtitle">Executive trajectory spanning enterprise architecture and high-volume platforms</p>
       
       <div class="timeline">
-        <!-- Experience Item -->
         <div class="timeline-item">
           <div class="item-header">
             <span class="role-title">Director of Architecture</span>
@@ -403,104 +437,201 @@
           </div>
           <div class="company-name">Fidelity Investments</div>
           <div class="item-desc">
-            Directing end-to-end enterprise architecture strategy, modernizing distributed platforms, and setting organizational benchmarks for scalability, observability, and data residency across mission-critical systems.
+            Governing enterprise-wide architectural strategy and platform standards across distributed financial ecosystems.
             <ul>
-              <li>Lead enterprise modernization roadmaps, driving adoption of cloud-native and event-driven patterns.</li>
-              <li>Mentor principal engineers and solution architects across cross-functional engineering pods.</li>
-              <li>Partner with executive stakeholders to align architectural investments with strategic growth.</li>
+              <li>Lead target-state cloud migrations, resilience frameworks, and distributed data architectures.</li>
+              <li>Coordinate engineering participation in flagship technical symposiums and academic partnerships.</li>
+              <li>Provide direct architectural governance to principal architects and cross-functional pods.</li>
             </ul>
           </div>
         </div>
 
-        <!-- Experience Item -->
         <div class="timeline-item">
           <div class="item-header">
-            <span class="role-title">Enterprise Architecture & Systems Engineering</span>
-            <span class="item-meta">Previous Roles</span>
+            <span class="role-title">Lead Enterprise Architect & Solution Strategist</span>
+            <span class="item-meta">Prior Engagements</span>
           </div>
-          <div class="company-name">Tier-1 Financial Institutions & Consulting</div>
+          <div class="company-name">Tier-1 Banking & Global Consulting</div>
           <div class="item-desc">
-            Spearheaded critical migration initiatives, hybrid cloud deployments, and resilient data-layer implementations across high-volume transaction processing systems.
+            Directed architectural transformations across low-latency payments, core banking ledger modernization, and secure high-throughput transaction pipelines.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Architecture & Technology Section -->
+  <!-- Architecture Disciplines -->
   <section id="architecture">
     <div class="container">
-      <h2 class="section-title">Architecture & Focus Areas</h2>
-      <p class="section-subtitle">Core architectural paradigms and engineering domains</p>
+      <h2 class="section-title">Core Architecture Disciplines</h2>
+      <p class="section-subtitle">Deep technical competencies shaping modern enterprise ecosystems</p>
       
       <div class="grid-3">
         <div class="card">
-          <h3>Event-Driven & Messaging</h3>
-          <p>Designing high-throughput, decoupled event backbones to ensure eventual consistency and zero data loss across distributed microservices.</p>
+          <div>
+            <h3>Event-Driven Ecosystems</h3>
+            <p>Architecting distributed event backbones for real-time transactional reliability, consistency guarantees, and event stream processing.</p>
+          </div>
           <div class="pill-list">
-            <span class="pill">Apache Kafka</span>
+            <span class="pill">Kafka</span>
             <span class="pill">Event Sourcing</span>
             <span class="pill">CQRS</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Cloud Platforms & Modernization</h3>
-          <p>Architecting multi-region, resilient cloud infrastructure focused on observability, security posture, and elastic horizontal scale.</p>
+          <div>
+            <h3>Cloud & Platform Modernization</h3>
+            <p>Designing multi-region, compliant cloud patterns emphasizing active-active availability, IaC, and observability guardrails.</p>
+          </div>
           <div class="pill-list">
-            <span class="pill">AWS Cloud</span>
+            <span class="pill">AWS</span>
+            <span class="pill">Zero-Trust</span>
             <span class="pill">Microservices</span>
-            <span class="pill">Infrastructure as Code</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Data Modeling & Systems Design</h3>
-          <p>Formalizing domain models, comprehensive system boundaries, and clear contract interfaces across complex business divisions.</p>
+          <div>
+            <h3>Enterprise Systems Design</h3>
+            <p>Establishing formal UML, Entity-Relationship modeling, domain boundaries, and resilient API contract ecosystems across lines of business.</p>
+          </div>
           <div class="pill-list">
             <span class="pill">Domain-Driven Design</span>
-            <span class="pill">Enterprise ERD</span>
-            <span class="pill">API Governance</span>
+            <span class="pill">UML / ERD</span>
+            <span class="pill">API Gateways</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Leadership & Affiliations -->
-  <section id="affiliations">
+  <!-- Publications & Thought Leadership -->
+  <section id="publications">
     <div class="container">
-      <h2 class="section-title">Professional Affiliations & Service</h2>
-      <p class="section-subtitle">Industry recognition and academic advisory</p>
+      <h2 class="section-title">Publications & Technical Insights</h2>
+      <p class="section-subtitle">Authored papers, whitepapers, and articles on enterprise architecture and data modeling</p>
+      
+      <div class="grid-2">
+        <div class="card">
+          <div>
+            <div class="card-meta">Technical Publication &bull; Systems Modeling</div>
+            <h3>Architectural Decomposition: Transitioning Legacy Monoliths to Decoupled Event Topologies</h3>
+            <p>A comprehensive examination of domain-driven boundary establishment, asynchronous event routing, and mitigating eventual consistency latency in high-stakes financial operations.</p>
+          </div>
+          <div class="card-footer">
+            <span class="item-meta">Architecture Whitepaper</span>
+            <a href="#" target="_blank" rel="noopener">Read Paper &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-meta">Enterprise Strategy &bull; Data Governance</div>
+            <h3>Formal Data Modeling in Scaled Microservice Architectures: From UML to Execution</h3>
+            <p>Analyzing the balance between autonomous service databases and enterprise-level ERD clarity, ensuring lineage tracking and regulatory compliance at scale.</p>
+          </div>
+          <div class="card-footer">
+            <span class="item-meta">Technical Series</span>
+            <a href="#" target="_blank" rel="noopener">Read Article &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking & Judging Section -->
+  <section id="speaking">
+    <div class="container">
+      <h2 class="section-title">Speaking, Panels & Judging</h2>
+      <p class="section-subtitle">Keynotes, industry conferences, technical judging, and hackathons</p>
       
       <div class="grid-3">
         <div class="card">
-          <h3>IEEE Senior Member</h3>
-          <p>Recognized as a Senior Member of the Institute of Electrical and Electronics Engineers, reflecting professional maturity and significant contributions to the engineering field.</p>
+          <div>
+            <div class="card-meta">Conference Speaker</div>
+            <h3>Modernizing Enterprise Financial Platforms</h3>
+            <p>Delivered insights on legacy decoupling, zero-downtime cutover patterns, and navigating cloud modernization without compromising uptime.</p>
+          </div>
+          <div class="card-footer">
+            <span class="item-meta">TechConnect &bull; Industry Panel</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Association for Computing Machinery</h3>
-          <p>Active professional member of the ACM, engaging with ongoing developments in computing machinery, distributed systems, and computational theory.</p>
+          <div>
+            <div class="card-meta">Industry Panelist</div>
+            <h3>Smart Systems & Scalable Architectures</h3>
+            <p>Explored the intersection of distributed message queues, real-time telemetry, and automated compliance in modern digital public and financial infrastructure.</p>
+          </div>
+          <div class="card-footer">
+            <span class="item-meta">Smart Cities Connect</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Academic Advisory Board</h3>
-          <p>Serving on the Information Systems Advisory Board at UNCW, helping shape curriculum requirements to bridge university instruction with real-world enterprise needs.</p>
+          <div>
+            <div class="card-meta">Technical Judge / Reviewer</div>
+            <h3>Enterprise Innovation & Hackathon Evaluation</h3>
+            <p>Evaluating emerging solutions on architecture soundness, security compliance, scalability potential, and clean domain design.</p>
+          </div>
+          <div class="card-footer">
+            <span class="item-meta">Industry & Academic Panels</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Professional Affiliations & Advisory -->
+  <section id="affiliations">
+    <div class="container">
+      <h2 class="section-title">Professional Affiliations & Service</h2>
+      <p class="section-subtitle">Academic advisory and senior membership in global technical bodies</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <div>
+            <h3>IEEE Senior Member</h3>
+            <p>Elevated to Senior Member of the Institute of Electrical and Electronics Engineers in recognition of technical expertise and leadership contributions in computing and systems architecture.</p>
+          </div>
+          <div class="pill-list">
+            <span class="pill">IEEE Computer Society</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>ACM Professional Member</h3>
+            <p>Active membership in the Association for Computing Machinery, participating in distributed systems literature, standards, and research advancement.</p>
+          </div>
+          <div class="pill-list">
+            <span class="pill">ACM Member</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Academic Advisory Board</h3>
+            <p>Serving on the Information Systems Advisory Board at UNCW, helping align undergraduate/graduate curriculum with current enterprise architecture demands.</p>
+          </div>
+          <div class="pill-list">
+            <span class="pill">UNCW IS Board</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <div class="contact-card">
-        <h2>Connect & Collaborate</h2>
-        <p>Interested in discussing enterprise architecture, cloud strategies, or advisory roles? Reach out via LinkedIn or email.</p>
+        <h2>Engage & Collaborate</h2>
+        <p>Available for advisory board engagements, keynote speaking on enterprise architecture, and technical panel discussions.</p>
         <div class="cta-group" style="justify-content: center;">
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-primary">Connect on LinkedIn</a>
-          <a href="mailto:your-email@example.com" class="btn btn-secondary">Send Email</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="btn btn-primary">Connect on LinkedIn</a>
+          <a href="mailto:contact@pushpendrapandey.com" class="btn btn-secondary">Send Direct Message</a>
         </div>
       </div>
     </div>
@@ -509,7 +640,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Pushpendra Pandey. Hosted on GitHub Pages.</p>
+      <p>&copy; 2026 Pushpendra Pandey. All rights reserved. Deployed on GitHub Pages.</p>
     </div>
   </footer>
 
